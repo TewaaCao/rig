@@ -9,13 +9,13 @@
     <div id="particles-js"></div>
     <div class="main">
         <h1>Rigtools | Devtools Code Execution</h1>
-        <p> Press q for evaluating code under 
+        <p> Press q to enter in 
             <a class="button" id="extdbg" href="javascript:void(0)"> extension id</a> 
         </p>
-        <p> Press m for evaluating under 
+        <p> Press m to enter 
             <a class="button" id="devdbg" href="javascript:void(0)">devtools</a> context
          </p>
-        <p> Typing cancel in any prompt will cancel the current operation. </p>
+        <p> Type cancel into the prompt to cancel current operation. </p>
     
         <a class="button" href="devtools://devtools/bundled/devtools_app.html?experiments=true&ws=%%updaterurl%%">Re-open devtools</a>
         <a class="button" href="javascript:void(0)" id="updater">Update payload</a>
@@ -47,16 +47,22 @@
             left: 50%;
             position: absolute;
             transform: translate(-50%, -50%);
-            border: 3px solid white;
+            border: 3px solid #1b1b1b9d;
             font-weight: bold;
             padding: 5%;
-            border-radius: 10px;
+            font-size: 15px;
+            border-radius: 50px;
             text-align: center;
-            background-color: #24273a;
+            background-color: #272727;
+            box-shadow: 0 0 32px rgb(255, 255, 255); 
+        }
+
+        h1 {
+            font-size: 50px;
         }
 
         .button {
-            background-color: #a6da95;
+            background-color: #154e02;
             border: none;
             color: white;
             padding: 9px 15px;
@@ -66,7 +72,7 @@
             font-size: 14px;
             margin: 4px 2px;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 15px;
         }
     </style>
     
@@ -88,7 +94,7 @@
   {
     "particles": {
       "number": {
-        "value": 80,
+        "value": 120,
         "density": {
           "enable": true,
           "value_area": 800
@@ -111,14 +117,14 @@
         "value": 0.5,
         "random": false,
         "anim": {
-          "enable": false,
+          "enable": true,
           "speed": 1,
           "opacity_min": 0.1,
           "sync": false
         }
       },
       "size": {
-        "value": 5,
+        "value": 3,
         "random": true,
         "anim": {
           "enable": false,
@@ -128,17 +134,17 @@
         }
       },
       "line_linked": {
-        "enable": true,
-        "distance": 150,
+        "enable": false,
+        "distance": 50,
         "color": "#ffffff",
         "opacity": 0.4,
         "width": 1
       },
       "move": {
         "enable": true,
-        "speed": 6,
-        "direction": "none",
-        "random": false,
+        "speed": 15,
+        "direction": "bottom",
+        "random": true,
         "straight": false,
         "out_mode": "out",
         "bounce": false,
@@ -153,11 +159,11 @@
       "detect_on": "canvas",
       "events": {
         "onhover": {
-          "enable": true,
+          "enable": false,
           "mode": "repulse"
         },
         "onclick": {
-          "enable": true,
+          "enable": false,
           "mode": "push"
         },
         "resize": true
